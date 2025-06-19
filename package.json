@@ -24,12 +24,16 @@
   },
   "contributors": [],
   "scripts": {
-    "dev": "node --watch src/app.js",
+    "dev": "node --watch src/server.js",
     "lint": "npx @biomejs/biome check --write .",
-    "test": ""
+    "test": "node --experimental-vm-modules ./node_modules/jest/bin/jest.js",
+    "test:watch": "jest --watchAll"
   },
+   
   "devDependencies": {
-    "@biomejs/biome": "2.0.0"
+    "@biomejs/biome": "2.0.0",
+    "jest": "^30.0.1",
+    "supertest": "^7.1.1"
   },
   "dependencies": {
     "@supabase/supabase-js": "^2.50.0",

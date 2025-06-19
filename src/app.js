@@ -15,6 +15,6 @@ app.use("/cards", cardRouter);
 app.use("/usuarios",userRouter);
 
 
-app.listen(process.env.PORT, () =>
-  console.log(`Servidor corriendo en http://localhost:${process.env.PORT}`)
-)
+
+
+export { app };
