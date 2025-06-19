@@ -1,0 +1,12 @@
+### Crear usuario
+POST http://localhost:3000/usuarios
+Content-Type: application/json
+
+{
+  "email": "juan@ejemplo.com",
+  "nombre": "Juan Pérez"
+}
+
+
+### Obtener todos los usuarios de supa
+GET http://localhost:3000/usuarios

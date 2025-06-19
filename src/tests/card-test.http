@@ -1,0 +1,86 @@
+### Crear tarjeta (prueba fallida, tarjeta ya existente)
+POST http://localhost:3000/cards
+Content-Type: application/json
+
+{
+  "card_number": "1234-5678-1234-5678",
+  "card_holder": "Juan Pérez",
+  "expiration_date": "12/26",
+  "cvv": "123",
+  "email": "juan@ejemplo.com"
+}
+
+### Crear tarjeta (prueba fallida, tarjeta con dueño)
+POST http://localhost:3000/cards
+Content-Type: application/json
+
+{
+  "card_number": "5000-5000-5000-5000",
+  "card_holder": "Juan Pérez",
+  "expiration_date": "12/26",
+  "cvv": "123",
+  "email": "juan@ejemplo.com"
+}
+
+###Crear tarjeta
+POST http://localhost:3000/cards
+Content-Type: application/json
+
+{
+  "card_number": "9876-5432-1012-1234",
+  "card_holder": "Usuario listo para adquirir card",
+  "expiration_date": "12/26",
+  "cvv": "123",
+  "email": "usuario@ejemplo.com"
+}
+
+
+
+
+### Obtener tarjeta por email 
+GET http://localhost:3000/cards/juan@ejemplo.com
+
+### Obtener tarjetas por mail (prueba allida, inexistente)
+GET http://localhost:3000/cards/mailinexistente@ejemplo.com
+
+### Obtener todas las tarjetas de supa
+GET http://localhost:3000/cards
+
+
+
+
+
+
+
+### Actualizar tarjeta(fallido, mail no registrado a ningun usuario)
+PUT http://localhost:3000/cards/1234-5678-1234-5678
+Content-Type: application/json
+
+{
+  "card_number": "1234-5678-1234-5678",
+  "card_holder": "Juan Pérez Actualizado",
+  "expiration_date": "01/27",
+  "cvv": "999",
+  "email": "mailInexistente@ejemplo.com"
+}
+
+### Actualizar tarjeta
+PUT http://localhost:3000/cards/1234-5678-1234-5678
+Content-Type: application/json
+
+{
+  "card_number": "1234-5678-1234-5678",
+  "card_holder": "Juan Pérez Actualizado",
+  "expiration_date": "01/26",
+  "cvv": "999",
+  "email": "juan@ejemplo.com"
+}
+
+
+
+
+### Eliminar tarjeta (prueba fallida, inexistente)
+DELETE http://localhost:3000/cards/1111-1111-1111-1111
+
+### Eliminar tarjeta 
+DELETE http://localhost:3000/cards/1234-5678-1234-5678
