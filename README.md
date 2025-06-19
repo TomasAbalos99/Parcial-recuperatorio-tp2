@@ -50,6 +50,7 @@ Este proyecto consiste en una API REST para gestionar tarjetas de crédito vincu
 
 ## 📁 Estructura del proyecto
 
+```text
 src/
 ├── app.js
 ├── server.js
@@ -59,10 +60,11 @@ src/
 ├── repository/
 ├── routes/
 ├── services/
-├── supabase/
+│   └── supabase/
 ├── tests/
-│ ├── card-test.http
-│ └── card.test.js
+│   ├── card-test.http
+│   └── card.test.js
+```
 
 
 
